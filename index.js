@@ -4,6 +4,6 @@ const { webhookToken } = require("./config.json")
 const { Webhook } = require("@top-gg/sdk")
 const webhook = new Webhook(webhookToken)
 
-app.post("./webhook/topgg",webhook.listen(vote=>{
+app.post("./webhook/topgg",webhook.listener(vote=>{
   console.log(vote.user)
 }))
